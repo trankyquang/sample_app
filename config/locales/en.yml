@@ -57,3 +57,5 @@ en:
   the_form_contain: "The form contains"
   create_my_account: "Create my account"
   confirmation: "Confirmation"
+  error_page: "Error Page"
+  user_not_found: "User Not Found!"

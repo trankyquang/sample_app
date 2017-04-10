@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def show
     @user = User.find_by id: params[:id]
+    if @user.nil?
+      render :error
+    else
+    end
   end
 
   def new
