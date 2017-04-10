@@ -53,3 +53,5 @@ en:
   contact_page: "contact page"
   this_will_be_a_sign_up_page: "This will be a signup page for new users."
   rails_logo: "Rails logo"
+  welcome: "Welcome to the Sample App!"
+  the_form_contain: "The form contains"
