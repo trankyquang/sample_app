@@ -7,3 +7,6 @@ password:
 remember:
   checked: "1"
   unchecked: "0"
+avatar:
+  resize: 50
+  size: 80
