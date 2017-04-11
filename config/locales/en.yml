@@ -76,3 +76,12 @@ en:
   save_change: "Save changes"
   change: "change"
   all_users: "All users"
+  acc_activated: "Account activated!"
+  invalid_link: "Invalid activation link"
+  message: "Account not activated. Check your email for the activation link."
+  pls_check_email: "Please check your email to activate your account."
+  acc_activation: "Account activation"
+  hi: "Hi "
+  activate_your_account: "Welcome to the Sample App!
+    Click on the link below to activate your account:"
+  activate: "Activate"
