@@ -13,3 +13,4 @@ avatar:
 mail:
   to: "to@example.org"
   from: "noreply@example.com"
+  expired: 2
