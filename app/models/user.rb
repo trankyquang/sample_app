@@ -6,9 +6,9 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: Settings.email.maximum},
     format: {with: VALID_EMAIL_REGEX},
-    uniqueness: { case_sensitive: false }
+    uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.password.minimum}
+    length: {minimum: Settings.password.minimum}, allow_nil: true
 
   has_secure_password
 
@@ -33,6 +33,6 @@ class User < ApplicationRecord
   end
 
   def forget
-    update_attribute(:remember_digest, nil)
+    update_attribute :remember_digest, nil
   end
 end
