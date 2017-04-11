@@ -65,3 +65,4 @@ en:
   user_not_found: "User Not Found!"
   new_user: "New user?"
   invalid_email_password: "Invalid email/password combination"
+  remember_me: "Remember me on this computer"
