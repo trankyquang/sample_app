@@ -14,3 +14,7 @@ mail:
   to: "to@example.org"
   from: "noreply@example.com"
   expired: 2
+micropost:
+  max_length: 140
+  capacity_of_picture: 5
+  resize: 400

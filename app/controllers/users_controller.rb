@@ -5,10 +5,7 @@ class UsersController < ApplicationController
   before_action :find_user, except: [:new, :create, :index]
 
   def show
-    if @user.nil?
-      render :error
-    else
-    end
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def destroy
