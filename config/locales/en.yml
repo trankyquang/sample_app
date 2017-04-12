@@ -99,3 +99,11 @@ en:
   this_link_will_expire: "This link will expire in two hours."
   did_not_request: "If you did not request your password to be reset,
     please ignore this email and your password will stay as it is."
+  micropost_created: "Micropost created!"
+  micropost_deleted: "Micropost deleted"
+  should_be_less_than_5MB: "should be less than 5MB"
+  please_choose_a_smaller_file:
+    "Maximum file size is 5MB. Please choose a smaller file."
+  view_my_profile: "view my profile"
+  ago: "ago."
+  posted: "Posted"
