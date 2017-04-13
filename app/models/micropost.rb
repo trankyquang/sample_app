@@ -9,6 +9,7 @@ class Micropost < ApplicationRecord
   scope :order_by_day, -> {order(created_at: :desc)}
   scope :load_new_feeds, -> following_ids, user_id do
     where("user_id IN (?) OR user_id = ?",following_ids, user_id)
+    order(created_at: :desc)
   end
 
   private
