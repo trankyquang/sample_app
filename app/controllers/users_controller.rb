@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   before_action :find_user, except: [:new, :create, :index]
 
   def show
+    @user_following_count = @user.following.count
+    @user_followers_count = @user.followers.count
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
@@ -51,6 +53,26 @@ class UsersController < ApplicationController
       flash[:danger] = t "please_login"
       redirect_to login_url
     end
+  end
+
+  def following
+    @title = t "following"
+    @user  = User.find params[:id]
+    if @user.nil?
+      render :error
+    end
+    @users = @user.following.paginate(page: params[:page])
+    render :show_follow
+  end
+
+  def followers
+    @title = t "followers"
+    @user  = User.find params[:id]
+    if @user.nil?
+      render :error
+    end
+    @users = @user.followers.paginate(page: params[:page])
+    render :show_follow
   end
 
   private

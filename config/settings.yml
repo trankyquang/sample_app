@@ -10,6 +10,7 @@ remember:
 avatar:
   resize: 50
   size: 80
+  follow: 30
 mail:
   to: "to@example.org"
   from: "noreply@example.com"
