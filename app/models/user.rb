@@ -21,9 +21,6 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.password.minimum}, allow_nil: true
 
-  #scope
-  scope :load_new_feeds, -> {order(created_at: :desc)}
-
   has_secure_password
 
   def User.digest string
