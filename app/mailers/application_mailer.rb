@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: Settings.mail.from
+  default from: "tran.ky.quang@framgia.com"
   layout "mailer"
 end

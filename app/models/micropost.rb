@@ -3,7 +3,7 @@ class Micropost < ApplicationRecord
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :content, presence: true,
-    length: {maximum: Settings.micropost.max_length}
+    length: {maximum: 140}
   validate :picture_size
 
   scope :order_by_day, -> {order(created_at: :desc)}
@@ -14,7 +14,7 @@ class Micropost < ApplicationRecord
 
   private
   def picture_size
-    if picture.size > Settings.micropost.capacity_of_picture.megabytes
+    if picture.size > 5.megabytes
       errors.add :picture, t("should_be_less_than_5MB")
     end
   end
